@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd"> 
+<validators>
+	<field name="user.id">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<message>请填入整数类型的用户编号</message>
+		</field-validator>
+	</field>
+	<field name="user.name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>用户名不能为空，请输入用户名</message>
+		</field-validator>
+	</field>
+	<field name="user.age">
+		<field-validator type="int">
+			<param name="min">16</param>
+			<param name="max">60</param>
+			<message>请输入的用户年龄在${min}到${max}之间</message>
+		</field-validator>
+	</field>
+</validators>
